@@ -10,7 +10,7 @@ if not pygame.mixer: print('Fehler pygame.mixer Modul konnte nicht geladen werde
 def main():
 
     # Initialisieren aller Pygame-Module und
-    # Fenster erstellen (wir bekommen eine Surface, die den Bildschirm repräsentiert).
+    # Fenster erstellen (Erstellen einer Surface, die den Bildschirm repräsentiert).
     pygame.init()
     width = 800
     height = 600
@@ -25,10 +25,10 @@ def main():
     pygame.mouse.set_visible(1)
     pygame.key.set_repeat(1, 30)
 
-    # Clock-Objekt erstellen, das wir benötigen, um die Framerate zu begrenzen.
+    # Clock-Objekt erstellen, um die Framerate zu begrenzen.
     clock = pygame.time.Clock()
 
-    # Die Schleife, und damit unser Spiel, läuft solange running == True.
+    # Die Schleife läuft, solange running == True.
     running = True
     x = 0
     y = 0
@@ -91,15 +91,15 @@ def main():
         #################### BEGIN Event processing loop #################
         for event in pygame.event.get():
 
-            # Spiel beenden, wenn wir ein QUIT-Event finden.
+            # Spiel beenden, wenn ein QUIT-Event finden.
             if event.type == pygame.QUIT:
                 print("X gedrückt!")
                 running = False
 
-            # Wir interessieren uns auch für "Taste gedrückt"-Events.
+            # Falls "Taste gedrückt"-Events.
             if event.type == pygame.KEYDOWN:
 
-                # Wenn Escape gedrückt wird, posten wir ein QUIT-Event in Pygames Event-Warteschlange.
+                # Wenn Escape gedrückt wird, QUIT-Event in Pygames Event-Warteschlange.
                 if event.key == pygame.K_ESCAPE:
 
                     pygame.event.post(pygame.event.Event(pygame.QUIT))
@@ -110,5 +110,5 @@ def main():
 # Überprüfen, ob dieses Modul als Programm läuft und nicht in einem anderen Modul importiert wird.
 if __name__ == '__main__':
 
-    # Unsere Main-Funktion aufrufen.
+    # Main-Funktion aufrufen.
     main()
