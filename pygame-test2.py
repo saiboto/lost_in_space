@@ -16,7 +16,7 @@ def main():
     height = 600
     screen = pygame.display.set_mode((width, height))
     imgBack = pygame.image.load ("/home/saiboto/saiboto_data/Bilder/space2.jpg")
-    imgSurf = pygame.image.load ("/home/saiboto/saiboto_data/Bilder/Astro2.png")
+    imgSurf = pygame.image.load ("/home/saiboto/saiboto_data/Bilder/cat_head2.png")
 
     #pygame.transform.flip(imgSurf, True, True)
 
